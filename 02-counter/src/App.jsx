@@ -12,11 +12,13 @@ const App = () => {
     }
   return (
     <div className='min-h-screen bg-purple-400 flex justify-center items-center'>
-        <div className='bg-amber-200 h-[200px] w-[40%] h-[400px] rounded-2xl'>
-            <Button onClick={MyClick} number={number} id="button-1" />
-            <Button onClick={MyClick} number={number} id="button-2" />
+        <div className='bg-amber-200 w-1/2 h-[400px] flex flex-col'>
+            <div className='h-1/2 w-full flex items-center'>
+                <Button className='w-1/2' number={number} setNumber={setNumber} id="button-1" />
+                <Button className='w-1/2' number={number} setNumber={setNumber} id="button-2" />
+            </div>
 
-            <h1 className='text-4xl h-[50%] flex justify-center items-center'>current number: {number}</h1>
+            <h1 className='text-4xl h-1/2 flex justify-center items-center'>current number: {number}</h1>
         </div>
         
     </div>

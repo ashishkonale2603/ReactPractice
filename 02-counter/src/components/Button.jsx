@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Button = ({id, onClick}) => {
+const Button = ({id, number, setNumber, className}) => {
+  function MyClick(){
+        let newNum=number+1;
+        setNumber(newNum);
+    }
     
   return (
-    <div id={id} className='w-[50%] h-[50%] flex float-left justify-center items-center'>
-        <button className='text-2xl font-bold border-2 p-[10px] rounded ' onClick={onClick}>Click Me {id}</button>
+    <div id={id} className={className}>
+        <button onClick={MyClick} className='w-full text-2xl font-bold border-2 p-[10px] rounded '>Click Me {id}</button>
     </div>
   )
 }
