@@ -5,6 +5,7 @@ import Contact from './components/pages/Contact'
 import About from './components/pages/About'
 import Navbar from './components/navbar/Navbar'
 import {Routes,Route} from 'react-router-dom'
+import Secondarynav from './components/navbar/Secondarynav'
 
 const App = () => {
   return (
