@@ -1,8 +1,11 @@
 import React from 'react'
+import Gender from './home/Gender'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='bg-[#E5F6FF] gap-20 h-1000'>
+      <Gender />
+    </div>
   )
 }
 

@@ -8,9 +8,9 @@ import DataContext from './components/context/DataContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <DataContext>
+      
         <App />
-      </DataContext>
+      
     </BrowserRouter>
   </StrictMode>,
 )
