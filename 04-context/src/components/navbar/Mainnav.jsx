@@ -5,7 +5,7 @@ const Mainnav = () => {
   return (
     <div className='h-30 bg-[#A4DDED] flex w-full justify-between'>
       <div className='w-160 font-bold text-5xl items-center flex justify-center'>
-        <h1>Spadewood</h1>
+        <h1 className='font-serif'>Peter England</h1>
       </div>
 
       <div className='h-full w-full flex flex-col'>
