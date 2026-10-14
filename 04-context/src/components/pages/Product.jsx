@@ -1,8 +1,11 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Product = () => {
   return (
-    <div>Product</div>
+    <div className='bg-[#E5F6FF] '>
+      <Outlet />
+    </div>
   )
 }
 

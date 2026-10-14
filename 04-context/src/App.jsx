@@ -16,12 +16,12 @@ const App = () => {
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/contect' element={<Contact />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
         <Route path='/about' element={<About />}></Route>
-        <Route path='/product' element={<Product />}>
-          <Route path='products/mens' element={<Mens />}></Route>
-          <Route path='/womens' element={<Womens />}></Route>
-          <Route path='/kids' element={<Kids />}></Route>
+        <Route path='/products' element={<Product />}>
+          <Route path='mens' element={<Mens />}></Route>
+          <Route path='womens' element={<Womens />}></Route>
+          <Route path='kids' element={<Kids />}></Route>
         </Route>
       </Routes>
     </div>
