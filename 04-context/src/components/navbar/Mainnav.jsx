@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Mainnav = () => {
   return (
-    <div className='h-30 bg-[#A4DDED] flex w-screen justify-between'>
+    <div className='h-30 bg-[#A4DDED] flex w-[100%] justify-between'>
       <div className='w-160 font-bold text-5xl items-center flex justify-center'>
         <h1 className='font-serif'>Peter England</h1>
       </div>

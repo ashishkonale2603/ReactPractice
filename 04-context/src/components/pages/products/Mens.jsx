@@ -22,19 +22,26 @@ const Mens = () => {
       'prod_id': 1236,
       'prod_brand': 'ZARA',
       'prod_name': 'T-Shirt',
-      'prod_image': '/images/casual_shirt.jpg',
+      'prod_image': '/images/t-shirt.jpg',
       'prod_size': ['XL','L','M','S']
     },
     {
       'prod_id': 1256,
       'prod_brand': "Levi's",
       'prod_name': 'Jeans',
-      'prod_image': './src/assets/casual_shirt.jpg',
+      'prod_image': '/images/jeans.jpg',
+      'prod_size': [34,32,36,30,38]
+    },
+    {
+      'prod_id': 1256,
+      'prod_brand': "Levi's",
+      'prod_name': 'Jeans',
+      'prod_image': '/images/jeans.jpg',
       'prod_size': [34,32,36,30,38]
     }
   ]
   return (
-    <div className='bg-[#E5F6FF] h-[1000px] flex'>
+    <div className='bg-[#E5F6FF]  flex'>
       <ProductGrid data={mens} />
       <Outlet />
     </div>
