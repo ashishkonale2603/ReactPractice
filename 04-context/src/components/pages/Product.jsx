@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 const Product = () => {
   return (
     <div className='bg-[#E5F6FF] '>
+      <div ></div>
       <Outlet />
     </div>
   )
