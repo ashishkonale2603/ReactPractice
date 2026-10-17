@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductGrid = (props) => {
   return (
     <div className='font-serif w-full my-[40px] flex flex-wrap bg-[#A4DDED] justify-center'>
         {props.data.map((item,index) => (
-            <div key={index} className='h-[400px] my-[20px] w-[320px] bg-[#E5F6FF] mx-[30px] rounded-2xl overflow-hidden border-[2px] border-blue-500'>
+            <Link key={index} to={`/products/${item.prod_id}`} className='h-[400px] my-[20px] w-[320px] bg-[#E5F6FF] mx-[30px] rounded-2xl overflow-hidden border-[2px] border-blue-500'>
               <div className='h-[300px] flex '>
                 <img className='h-full w-full object-cover' src={item.prod_image} alt="shirt" />
               </div>
@@ -24,7 +25,7 @@ const ProductGrid = (props) => {
                   })}
                 </div>
               </div>
-            </div>
+            </Link>
             
         ))}
     </div>

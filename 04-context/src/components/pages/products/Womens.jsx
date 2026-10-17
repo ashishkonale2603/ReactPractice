@@ -8,7 +8,6 @@ const Womens = () => {
   return (
     <div className='bg-[#E5F6FF]  flex'>
       <ProductGrid data={womensProducts} />
-      <Outlet />
     </div>
   )
 }

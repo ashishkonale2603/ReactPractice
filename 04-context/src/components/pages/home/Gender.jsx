@@ -6,17 +6,17 @@ const Gender = () => {
         {
             'gender':'Mens',
             'imglink':'/images/mens.jpg',
-            'link':'/products/Mens'
+            'link':'/products/mens'
         },
         {
             'gender':'Womens',
             'imglink':'/images/womens.jpg',
-            'link':'/products/Womens'
+            'link':'/products/womens'
         },
         {
             'gender':'Kids',
             'imglink':'/images/kids.jpg',
-            'link':'/products/Kids'
+            'link':'/products/kids'
         },
     ]
   return (

@@ -9,7 +9,6 @@ const Mens = () => {
   return (
     <div className='bg-[#E5F6FF]  flex'>
       <ProductGrid data={mensProducts} />
-      <Outlet />
     </div>
   )
 }
