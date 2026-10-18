@@ -26,7 +26,7 @@ export const DataProvider = ({children}) => {
       'prod_size': ['XL','L','M','S']
     },
     {
-      'prod_id': 1256,
+      'prod_id': 125436,
       'prod_brand': "Levi's",
       'prod_name': 'Jeans',
       'prod_image': '/images/jeans.jpg',
