@@ -20,7 +20,7 @@ const Gender = () => {
         },
     ]
   return (
-    <div className=" bg-[url('/images/clothes.jpg')] bg-center bg-cover h-150 w-full flex justify-center items-center gap-20">
+    <div className=" bg-[url('/images/clothes.jpg')] bg-center bg-cover h-150 w-full flex justify-center items-center gap-20 my-[20px]">
         {genderCards.map((item,index) => (
             <Link key={index} to={item.link} className='relative h-100 w-75 bg-[#E5F6FF] flex group rounded-2xl overflow-hidden'>
             
