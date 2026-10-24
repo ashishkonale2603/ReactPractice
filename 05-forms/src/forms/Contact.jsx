@@ -1,12 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Contact = () => {
-  let formbox='flex flex-rows gap-[5px] w-full'
-  let inputcss='border-[2px] p-[2px] rounded-[3px]'
+  let formbox='flex flex-rows gap-[10px] w-full'
+  let inputcss='border-[2px] rounded-[3px] p-[1px]'
 
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
+
+  useEffect(()=>{
+    console.log('The updated value is ', name)
+  },[name]);
+  useEffect(()=>{
+    console.log('The updated value is ', mail)
+  },[mail]);
 
   function submitHandler(e){
     e.preventDefault()
@@ -31,7 +38,6 @@ const Contact = () => {
               value={name} 
               onChange={(e)=>{
                 setName(e.target.value)
-                console.log(name)
               }}
               placeholder='John Doe' />
             </div>
@@ -44,12 +50,11 @@ const Contact = () => {
               value={mail} 
               onChange={(e)=>{
                 setMail(e.target.value)
-                console.log(mail)
               }}
               placeholder='john@doe.com' />
             </div>
-            <div className={formbox}>
-              <button className={inputcss}>Submit!</button>
+            <div className='justify-center flex m-[30px]'>
+              <button className='border-[2px] p-[5px] rounded-[5px]'>Submit!</button>
             </div>
           </div>
         </form>
