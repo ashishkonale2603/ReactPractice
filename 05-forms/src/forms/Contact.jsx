@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 const Contact = () => {
+  const myname=localStorage.getItem('name')
+
   let formbox='flex flex-rows gap-[10px] w-full'
   let inputcss='border-[2px] rounded-[3px] p-[1px]'
 
@@ -56,6 +58,9 @@ const Contact = () => {
             <div className='justify-center flex m-[30px]'>
               <button className='border-[2px] p-[5px] rounded-[5px]'>Submit!</button>
             </div>
+            <h1>
+              {myname}
+            </h1>
           </div>
         </form>
       </div>
