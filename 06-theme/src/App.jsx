@@ -1,121 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const [theme, setTheme] = useState();
+  useEffect(()=>{
+    if (theme === 'dark'){
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.add('white')
+    }
+  },[theme])
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className='h-screen w-screen bg-white dark:bg-black'>
+      <h1 className='bg-amber-400 text-[40px] py-[20px] justify-center flex font-semibold'>Welcome to my new Website.</h1>
+      <div className='h-[100px] w-fit mx-auto flex items-center justify-center mt-[50px]'>
+        <div className='flex justify-center'>
+          <button 
+          className='h-[50px] w-[100px] border-[2px] rounded-[8px] mx-[30px]'
+          onClick={()=>setTheme('light')}>Light</button>
+          <button 
+          className='h-[50px] w-[100px] border-[2px] rounded-[8px] mx-[30px]'
+          onClick={()=>setTheme('dark')}>Dark</button>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+      </div>
+      <div className='p-[50px] dark:bg-gray-800'>
+        <div className='h-fit w-fit bg-blue-200 p-[50px]'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nam necessitatibus natus perspiciatis harum rem qui quaerat nesciunt quo cum? Quae qui voluptatum, dolore voluptates quis error odio quod molestiae!
+          Libero facere quaerat saepe soluta facilis. Doloremque rerum, magni ad nobis deserunt, nisi doloribus fuga ut illum corporis voluptas eaque obcaecati? Unde adipisci expedita inventore pariatur consequatur aut sit accusantium.
+          Soluta, vitae repellendus? Minus animi esse ea nulla ullam iste eveniet voluptate ipsam facere aut tempora laborum culpa corporis nisi dolore, odit dignissimos consequatur! Iste quas reiciendis fugit repellendus ipsam!
+          Odit, dolor magni, tempora corrupti expedita atque, minus quasi unde ad officiis minima. Magni praesentium velit in ab perferendis, tempora quaerat earum, odit numquam accusamus distinctio repellendus libero incidunt ea.
+          Ipsa doloremque corporis asperiores pariatur necessitatibus officiis dicta magni ipsum dolorum fuga sit odio sapiente est, ipsam porro obcaecati sed nisi repellat, architecto voluptatum blanditiis perspiciatis ad officia! Culpa, vitae.
+          Natus, voluptatibus mollitia non illo aspernatur, amet sit, cum expedita a laudantium tenetur? Nisi sit consequuntur non temporibus commodi reiciendis corrupti cumque, dolore similique amet, nostrum distinctio sunt, excepturi aspernatur.
+          Tenetur ut, nobis doloribus officia non numquam consequuntur eos perspiciatis nulla optio totam ipsa dolores quidem quisquam enim eius distinctio fuga quos. Perferendis debitis maiores non magnam aut et! Quisquam?
+          Repellendus blanditiis quis quia sequi consectetur non eveniet tenetur, vero facere placeat praesentium necessitatibus provident saepe, velit fugit alias consequatur, ut autem mollitia aliquid. Aliquid facilis dolore nostrum fugit cupiditate?
+          Similique quaerat ullam veniam quis inventore nobis, eius temporibus natus dolore quod molestias animi perspiciatis magnam minus exercitationem corporis distinctio eos nisi, est sapiente. Itaque voluptatum eos fugit. Quod, esse.
+          Cupiditate ipsum illo dignissimos eos rem nihil voluptatem reprehenderit officiis perspiciatis a! Expedita voluptates enim eligendi sapiente velit voluptas soluta ex. Modi cumque enim illum perspiciatis quibusdam sapiente temporibus reprehenderit!
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      </div>
+    </div>
   )
 }
 
