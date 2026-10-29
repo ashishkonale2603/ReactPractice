@@ -7,13 +7,14 @@ const App = () => {
     if (theme === 'dark'){
       document.documentElement.classList.add('dark')
     } else {
-      document.documentElement.classList.add('white')
+      document.documentElement.classList.remove('dark')
     }
+    
   },[theme])
   return (
-    <div className='h-screen w-screen bg-white dark:bg-black'>
+    <div className='h-screen w-screen bg-white dark:bg-gray-800'>
       <h1 className='bg-amber-400 text-[40px] py-[20px] justify-center flex font-semibold'>Welcome to my new Website.</h1>
-      <div className='h-[100px] w-fit mx-auto flex items-center justify-center mt-[50px]'>
+      <div className='h-[100px] w-fit mx-auto flex items-center justify-center mt-[30px] dark:text-white'>
         <div className='flex justify-center'>
           <button 
           className='h-[50px] w-[100px] border-[2px] rounded-[8px] mx-[30px]'
@@ -23,8 +24,8 @@ const App = () => {
           onClick={()=>setTheme('dark')}>Dark</button>
         </div>
       </div>
-      <div className='p-[50px] dark:bg-gray-800'>
-        <div className='h-fit w-fit bg-blue-200 p-[50px]'>
+      <div className='p-[40px] dark:bg-black'>
+        <div className='h-fit w-fit bg-blue-200 p-[50px] dark:bg-gray-800 dark:text-white'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nam necessitatibus natus perspiciatis harum rem qui quaerat nesciunt quo cum? Quae qui voluptatum, dolore voluptates quis error odio quod molestiae!
           Libero facere quaerat saepe soluta facilis. Doloremque rerum, magni ad nobis deserunt, nisi doloribus fuga ut illum corporis voluptas eaque obcaecati? Unde adipisci expedita inventore pariatur consequatur aut sit accusantium.
           Soluta, vitae repellendus? Minus animi esse ea nulla ullam iste eveniet voluptate ipsam facere aut tempora laborum culpa corporis nisi dolore, odit dignissimos consequatur! Iste quas reiciendis fugit repellendus ipsam!
