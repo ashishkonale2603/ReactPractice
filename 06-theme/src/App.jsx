@@ -13,7 +13,7 @@ const App = () => {
   },[theme])
   return (
     <div className='h-screen w-screen bg-white dark:bg-gray-800'>
-      <h1 className='bg-amber-400 text-[40px] py-[20px] justify-center flex font-semibold'>Welcome to my new Website.</h1>
+      <h1 className='bg-amber-400 text-[40px] py-[20px] justify-center flex font-semibold text-black'>Welcome to my new Website.</h1>
       <div className='h-[100px] w-fit mx-auto flex items-center justify-center mt-[30px] dark:text-white'>
         <div className='flex justify-center'>
           <button 
